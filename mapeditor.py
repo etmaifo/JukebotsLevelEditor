@@ -387,7 +387,12 @@ class Editor:
 
 
 	def create_level_data(self):
-		f = open("output/level01.lv", "w")
+		path = ""
+		for i in xrange(10):
+			path = "output/level0%s.lv" %str(i+1)
+			if not os.path.exists(path):
+				f = open(path, "w")
+				break
 		players = ["players"]
 		buttons = ["buttons"]
 		lifts = ["lifts"]
