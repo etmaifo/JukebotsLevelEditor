@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8aa77f91-e049-4be0-a66b-d18f3f73385e}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>assets.py</StartupFile>
+    <StartupFile>mapeditor.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>

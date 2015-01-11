@@ -388,8 +388,11 @@ class Editor:
 
 	def create_level_data(self):
 		path = ""
-		for i in xrange(10):
-			path = "output/level0%s.lv" %str(i+1)
+		for i in xrange(100):
+			if i < 10:
+				path = "output/level0%s.lv" %str(i+1)
+			else:
+				path = "output/level%s.lv" %str(i+1)
 			if not os.path.exists(path):
 				f = open(path, "w")
 				break
@@ -419,7 +422,7 @@ class Editor:
 				locks.append(assets)
 			elif assets[0].startswith("key"):
 				keys.append(assets)
-			elif assets[0].startwith("star"):
+			elif assets[0].startswith("star"):
 				stars.append(assets)
 
 
@@ -502,7 +505,7 @@ class Editor:
 		f.write("\n")
 		for star in stars:
 			if star == "stars":
-				f.write(key+"\n")
+				f.write(star+"\n")
 			else:
 				l = ""
 				for item in star:
