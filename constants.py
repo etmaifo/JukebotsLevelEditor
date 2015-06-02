@@ -8,29 +8,60 @@ BG = "img/bg.png"
 
 BLACK = (0,0,0)
 
-BLOCKSIZE = 16
+class ASSET:
+    player = "player"
+    block = "block"
+    box = "box"
+    lock = "lock"
+    key = "key"
+    platform_h = "platform_h"
+    platform_v = "platform_v"
+    star = "star"
+    button_blue = "button_blue"
+    button_red = "button_red"
+    button_green = "button_green"
+    door_blue = "door_blue"
+    door_red = "door_red"
+    door_green = "door_green"
+    platform_block = "platform_block"
+    platformv_block = "platformv_block"
 
-BUTTONWIDTH = 26
-BUTTONHEIGHT = 16
 
-DOORWIDTH = 16
-DOORHEIGHT = 16*4
 
-LOCKSIZE = 32
+class BLOCK:
+    width = 32
+    height = 32
+    size = (32, 32)
 
-KEYWIDTH = 32
-KEYHEIGHT = 20
+class BUTTON:
+    width = 52
+    height = 32
 
-PLAYER_WIDTH = 25
-PLAYER_HEIGHT = 30
 
-STARWIDTH = 16
-STARHEIGHT = 16
+class DOOR:
+    width = 32
+    height = 32*4
+
+class LOCK:
+    width = 64
+    height = 64
+
+class KEY:
+    width = 64
+    height = 64
+
+class PLAYER:
+    width = 50
+    height = 60
+    spritesheet = pygame.image.load("img/player.png")
+
+class STAR:
+    width = 32
+    height = 32
 
 class MouseButton:
-	#def __init__(self):
-	LEFT = 1
-	MIDDLE = 2
-	RIGHT = 3
-	WHEEL_UP = 4
-	WHEEL_DOWN = 5
+    LEFT = 1
+    MIDDLE = 2
+    RIGHT = 3
+    WHEEL_UP = 4
+    WHEEL_DOWN = 5
