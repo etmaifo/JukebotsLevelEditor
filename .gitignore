@@ -262,3 +262,7 @@ pip-log.txt
 
 # Design files
 design/
+
+
+# pycharm
+.idea/

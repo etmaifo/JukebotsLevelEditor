@@ -151,7 +151,7 @@ class Icons:
         pos = pygame.mouse.get_pos()
         for icon in self.icons_group:
             if icon.rect.collidepoint(pos):
-                self.selected_type = icon.type
+                self.selected = icon.type
                 return
 
     def draw(self, surface):

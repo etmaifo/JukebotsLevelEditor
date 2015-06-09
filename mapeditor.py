@@ -3,13 +3,12 @@ from pygame import *
 from block import *
 from camera import *
 from crosshair import *
-#from constants import *
 from assets import *
 from icons import *
 
 
 class Editor:
-    def __init__(self, width=800, height=384):
+    def __init__(self, width=1184, height=576):
         pygame.init()
         os.environ["SDL_VIDEO_CENTERED"] = "1"
 
@@ -17,7 +16,7 @@ class Editor:
         self.height = height
         self.screen_width = 640
         self.screen = pygame.display.set_mode((self.width, self.height)) #DOUBLEBUF | FULLSCREEN)
-        self.right_panel = pygame.Surface((self.screen_width, height))
+        self.right_panel = pygame.Surface((width, height))
         self.right_panel_rect = self.right_panel.get_rect()
         self.sidebar = pygame.Surface((160, self.height))
         self.sidebar_rect = self.sidebar.get_rect()
@@ -88,8 +87,8 @@ class Editor:
                     asset.update()
                     self.highlight_tile(asset, pygame.mouse.get_pos())
                     self.icons.selectIcon()
-                    self.asset.type = self.icons.selected_type
-                    self.display_asset.type = self.icons.selected_type
+                    self.asset.type = self.icons.selected
+                    self.display_asset.type = self.icons.selected
 
             if event.type == KEYDOWN:
                 if self.complete_asset:
